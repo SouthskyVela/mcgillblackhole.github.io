@@ -17,6 +17,7 @@ from scipy.special import ellipj
 from scipy.special import ellipkinc
 from scipy.special import ellipk
 from scipy.optimize import fsolve
+
 import time
 
 # ------------------------ Raytracing of light -------------
@@ -360,7 +361,7 @@ class Widget(QtWidgets.QWidget):
 
     def stop(self):
         ani.event_source.stop()
-        ani.frame_seq = ani.new_frame_seq()  
+        ani.frame_seq = ani.new_frame_seq()
 
     def Loop(self):
         #ani.event_source.stop()
@@ -575,5 +576,6 @@ if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
     w = Widget()
     w.show()
+    #.waitKey(0)
     #main()
     sys.exit(app.exec_())
